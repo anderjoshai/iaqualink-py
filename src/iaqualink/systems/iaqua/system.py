@@ -154,7 +154,7 @@ class IaquaSystem(AqualinkSystem):
             if k in self.devices:
                 for dk, dv in v.items():
                     if dk == "state":
-                        if dv not in [1,0]:
+                        if dv not in [0,1,2,3]:
                             continue
                     self.devices[k].data[dk] = dv
             else:
